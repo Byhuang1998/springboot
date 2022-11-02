@@ -8,7 +8,7 @@
     <artifactId>springboot-helloworld</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-<!--    springboot-->
+<!--    springboot  定义了很多版本信息，组合了一套最优搭配的技术版本-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -19,6 +19,7 @@
 <!--        web开发的起步依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
+<!--            在各种starter中，定义了完成该功能需要的坐标合集-->
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
