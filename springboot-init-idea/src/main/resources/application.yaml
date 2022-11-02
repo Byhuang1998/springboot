@@ -1,2 +1,24 @@
 server:
   port: 8083
+
+name: zx
+
+# 对象
+person:
+  name: ${name} # 参数引用
+  age: 20
+
+# 对象行内写法
+person2: {name: zx, age: 20}
+
+# 数组
+address:
+  - beijing
+  - shanghai
+
+# 数组的行内写法
+address2: [beijing, shanghai]
+
+# 纯量
+str1: 'a \n b'
+str2: "a \n b"
