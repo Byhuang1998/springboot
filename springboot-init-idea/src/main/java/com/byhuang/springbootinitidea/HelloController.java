@@ -7,6 +7,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
+
 /**
  * @author mskj-huangbingyi
  * @version 1.0
@@ -34,6 +36,9 @@ public class HelloController {
     @Autowired
     private Environment env;
 
+    @Autowired
+    private Person person;
+
     @RequestMapping("/hello")
     public String hello() {
         System.out.println("========直接通过注解来来一个个获取yaml文件中的数据========");
@@ -45,6 +50,11 @@ public class HelloController {
 
         System.out.println("========可以通过Environment变量来直接获取yaml文件中的数据========");
         System.out.println(env.getProperty("person.name"));
+
+        System.out.println("========可以通过ConfigurationProperties注解获取yaml文件中的数据========");
+        System.out.println(person);
+        String[] address = person.getAddress();
+        Arrays.stream(address).forEach(System.out::print);
 
         return "hello springboot init...";
     }

@@ -7,6 +7,9 @@ name: zx
 person:
   name: ${name} # 参数引用
   age: 20
+  address:
+    - beijing
+    - shanghai
 
 # 对象行内写法
 person2: {name: zx, age: 20}
