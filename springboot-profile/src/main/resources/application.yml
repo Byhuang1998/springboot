@@ -1,0 +1,20 @@
+# yml多文档方式，用三根短杠 --- 分隔不同配置
+---
+server:
+  port: 8081
+spring:
+  profiles: dev-yml
+---
+server:
+  port: 8082
+spring:
+  profiles: test-yml
+---
+server:
+  port: 8083
+spring:
+  profiles: pro-yml
+---
+spring:
+  profiles:
+    active: pro-yml
